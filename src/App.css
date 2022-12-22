@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 /*('https://fonts.googleapis.com/css?family=Poppins:900i')*/
-*{
-  margin: 0px;
-  padding: 0px;
-}
 
 .App {
   font-family: 'Exo','Poppins';  
@@ -15,6 +11,7 @@
   height:100vh;
 }
 
+
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -25,22 +22,6 @@
   color: white;
 }
 
-/*.custom-buttons button {
-  font-size: 24px;
-  margin-bottom: 24px;
-  color: white;
-  padding: 12px;
-  font-weight: bold;
-  margin-right: 16px;
-  border-radius: 16px;
-}
-
-.button:active {
-  background-color: #f3f4f6;
-  box-shadow: -1px 2px 5px rgba(81,41,10,0.15),0px 1px 1px rgba(81,41,10,0.15);
-  transform: translateY(0.125rem);
-}
-
 
 input {
   font-family: 'Exo';
@@ -49,22 +30,11 @@ input {
   border-radius: 8px;
 }
 
-.description {
+/*.description {
   background-color: rgb(71, 66, 209);
   border-radius: 24px;
   padding: 24px;
-  margin-bottom: 64px;
-}*/
-
-.custom-buttons {
-  font-size: 24px;
-  margin-bottom: 24px;
-  color: white;
-  padding: 12px;
-  font-weight: bold;
-  border-radius: 16px;
-  
-}
+  margin-bottom: 64px;}*/
 
 .greeting {
   font-family: 'Exo';
@@ -72,9 +42,27 @@ input {
   color:rgb(226, 228, 140);
 }
 
+.custom-buttons {
+  font-size: 24px;
+  margin-bottom: 24px;
+  padding: 12px;
+  font-weight: bold;
+}
+/*
+.custom-buttons button {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  margin-right: 16px;
+  border-radius: 16px;
+}*/
+
+
 .first-button{
   width: 170px;
-  height: 70px;
+  height: 90px;
   font-weight: bold;
   font-size: 20px;
   font-family: 'Exo','Poppins';
@@ -88,8 +76,9 @@ input {
   margin-right: 16px;
 }
 .second-button{
+  
   width: 170px;
-  height: 70px;
+  height: 90px;
   font-weight: bold;
   font-size: 20px;
   font-family: 'Exo','Poppins';
@@ -103,16 +92,19 @@ input {
   margin-left: 16px;
 }
 
+.first-button:hover {
+  box-shadow: -5px -5px 0 0;
+  transform: scale(0.9);
+}
 
-a {
-  position: absolute;
-  text-decoration: none;
-  color: #000;
-  z-index: 1000;
+.second-button:hover {
+  box-shadow: -5px -5px 0 0;
+  transform: scale(0.9);
 }
 
 .custom-buttons::after {
   content: "";
+  opacity: 1;
   top: 0;
   left: 0;
   width: 170px;
@@ -121,31 +113,18 @@ a {
   opacity: 0;
   transition: 0.3s;
 }
-.custom-buttons:hover {
-  box-shadow: -5px -5px 0 0;
-  transform: scale(0.9);
-}
-.custom-buttons:hover::after {
-  opacity: 1;
-}
 
 
-.inputbox{
-  font-family: 'Exo','Poppins';
-  display: block;
-  margin: 10px;
-  padding: 5px;
-  border: none;
-  font-size: 22px;
-}
+
 
 
 .circles{
-  position: absolute;
+  /*position: absolute;*/
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+ /* z-index: 1;*/
   overflow: hidden;
 }
 
@@ -158,8 +137,8 @@ a {
   background: rgba(255, 255, 255, 0.2);
   animation: animate 25s linear infinite;
   bottom: -150px;
-  
 }
+
 
 .circles li:nth-child(1){
   left: 25%;
@@ -236,7 +215,6 @@ a {
   animation-delay: 0s;
   animation-duration: 11s;
 }
-
 
 
 @keyframes animate {

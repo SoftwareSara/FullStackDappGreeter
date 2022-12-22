@@ -98,8 +98,7 @@ function App() {
         <input className="inputbox"
           onChange={(e) => setMessage(e.target.value)}
           value={message}
-          placeholder="set greeting message"
-        />
+          placeholder="set greeting message"/>
 
         {/* Current Value stored on Blockchain */}
         <h2 className="greeting"> {currentGreeting}</h2>
