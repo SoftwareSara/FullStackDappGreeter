@@ -83,24 +83,35 @@ function App() {
           <h1>greeter Dapp</h1>
           <h3>fetch and set a new greeting</h3>
         </div>
+
         {/* BUTTONS - Fetch and Set */}
         <div className="custom-buttons">
-          <button onClick={fetchGreeting} style={{ backgroundColor: "purple" }}>
+          <button className="first-button" onClick={fetchGreeting}>
             fetch greeting
           </button>
-          <button onClick={setGreeting} style={{ backgroundColor: "purple" }}>
+          <button className="second-button" onClick={setGreeting}>
             set greeting
           </button>
         </div>
+
         {/* INPUT TEXT - String  */}
-        <input
+        <input className="inputbox"
           onChange={(e) => setMessage(e.target.value)}
           value={message}
           placeholder="set greeting message"
         />
 
         {/* Current Value stored on Blockchain */}
-        <h2 className="greeting">current greeting: {currentGreeting}</h2>
+        <h2 className="greeting"> {currentGreeting}</h2>
+        <ul class="circles">
+          <li></li>
+          <li></li> <li></li>
+          <li></li>
+          <li></li>
+          <li></li> <li></li> <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
     </div>
   );

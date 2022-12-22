@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+/*('https://fonts.googleapis.com/css?family=Poppins:900i')*/
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
 .App {
-  font-family: 'Trebuchet MS';
+  font-family: 'Exo','Poppins';  
+  /*background-color: rgb(71, 66, 209);*/
   text-align: center;
+  background: #4e54c8;
+  background: -webkit-linear-gradient(to left, #8f94fb, #1e26bb);  
+  width: 100%;
+  height:100vh;
 }
 
 .App-header {
-  font-family: 'Trebuchet MS';
-  background: linear-gradient(#6F00FF, #330040);
-  /*background-color: #110314; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,7 +25,7 @@
   color: white;
 }
 
-.custom-buttons button {
+/*.custom-buttons button {
   font-size: 24px;
   margin-bottom: 24px;
   color: white;
@@ -34,7 +43,7 @@
 
 
 input {
-  font-family: 'Trebuchet MS';
+  font-family: 'Exo';
   font-size: 24px;
   padding: 16px;
   border-radius: 8px;
@@ -45,9 +54,203 @@ input {
   border-radius: 24px;
   padding: 24px;
   margin-bottom: 64px;
+}*/
+
+.custom-buttons {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 16px;
+  
 }
 
 .greeting {
-  font-family: 'Trebuchet MS';
-  color: rgb(173, 56, 122);
+  font-family: 'Exo';
+  font-size: 2rem;
+  color:rgb(226, 228, 140);
+}
+
+.first-button{
+  width: 170px;
+  height: 70px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Exo','Poppins';
+  background-color: #fdcb6e;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 0;
+  transition: 0.3s;
+  justify-content: center;
+  align-items: center;
+  min-height: 20px;
+  margin-right: 16px;
+}
+.second-button{
+  width: 170px;
+  height: 70px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Exo','Poppins';
+  background-color: #fdcb6e;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 0;
+  transition: 0.3s;
+  justify-content: center;
+  align-items: center;
+  min-height: 20px;
+  margin-left: 16px;
+}
+
+
+a {
+  position: absolute;
+  text-decoration: none;
+  color: #000;
+  z-index: 1000;
+}
+
+.custom-buttons::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 170px;
+  height: 70px;
+  background: linear-gradient(to right, #ff7675, #e84393);
+  opacity: 0;
+  transition: 0.3s;
+}
+.custom-buttons:hover {
+  box-shadow: -5px -5px 0 0;
+  transform: scale(0.9);
+}
+.custom-buttons:hover::after {
+  opacity: 1;
+}
+
+
+.inputbox{
+  font-family: 'Exo','Poppins';
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  font-size: 22px;
+}
+
+
+.circles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+  
+}
+
+.circles li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+
 }
