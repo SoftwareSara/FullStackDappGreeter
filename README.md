@@ -12,4 +12,4 @@ npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
 
-![Display](/Users/saradjermoun/full-stack-dapp/pic/display.png)
+![Display](pic/display.png)
